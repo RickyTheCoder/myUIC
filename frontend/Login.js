@@ -116,5 +116,4 @@ const styles = StyleSheet.create({
     // Add marginTop if needed to slightly lift it
     // marginTop: 10,
   },
-
 });
