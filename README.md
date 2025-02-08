@@ -14,5 +14,5 @@
       - On windows: choco install nodejs
     - Run: npm install
 4. Download Expo Go on your iOS device via the app store.
-5. run npx epo start
+5. run npx expo start
 6. Scan barcode displayed in terminal
