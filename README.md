@@ -9,10 +9,10 @@
 1. Clone repository using: git clone https://github.com/RickyTheCoder/myUIC
 2. Change directory to frontend using: cd frontend
 3. Download Dependencies:
-    - Install Node.js:
+    - Install Node.js (if not already installed):
       - On mac: brew install node
       - On windows: choco install nodejs
     - Run: npm install
-4. Download Expo Go on your iOS device via the app store.
-5. run npx expo start
+4. Run: npx expo start
+5. Download Expo Go on your iOS device via the app store.
 6. Scan barcode displayed in terminal
