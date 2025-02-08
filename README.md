@@ -9,7 +9,7 @@
 1. Clone repository using: git clone https://github.com/RickyTheCoder/myUIC
 2. Change directory to frontend using: cd frontend
 3. Download Dependencies:
-    - Install Node.js:
+    - Install Node.js (if not already installed):
       - On mac: brew install node
       - On windows: choco install nodejs
     - Run: npm install
