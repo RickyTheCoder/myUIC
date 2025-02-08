@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     backgroundColor: 'white',
-    height: 350,
-    width: null,
+    height: 260,
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     // marginTop: 5,
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     borderRadius: 19,
     alignItems: 'center',
     width: '85%',
-    marginTop: 80,
+    marginTop: 30,
   },
   title: {
     fontSize: 30,
