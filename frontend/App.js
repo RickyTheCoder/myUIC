@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
+import { View, Text, StatusBar, TextInput, Image, TouchableOpacity, StyleSheet, ImageBackground, ScrollView } from 'react-native';
 import backgroundImage from './image.png';
 
 
@@ -14,13 +14,14 @@ export default function App() {
       resizeMode="contain"
     >
       <View style={styles.container}>
-        <Text style={styles.title}> MyUic Login!</Text>
+        <Text style={styles.title}> MyUIC Login!</Text>
 
         <TextInput
           style={styles.input}
           placeholder="Email"
           value={email}
           onChangeText={setEmail}
+          placeholderTextColor="grey"
         />
 
         <TextInput
@@ -28,6 +29,7 @@ export default function App() {
           placeholder="Password"
           value={password}
           onChangeText={setPassword}
+          placeholderTextColor="grey"
           secureTextEntry
         />
 
@@ -46,10 +48,12 @@ export default function App() {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    height: 300,
+    backgroundColor: 'white',
+    height: 350,
     width: null,
     justifyContent: 'center',
     alignItems: 'center',
+    // marginTop: 5,
   },
   container: {
     backgroundColor: 'rgba(255, 255, 255, 0.85)', 
@@ -57,6 +61,7 @@ const styles = StyleSheet.create({
     borderRadius: 19,
     alignItems: 'center',
     width: '85%',
+    marginTop: 80,
   },
   title: {
     fontSize: 30,
