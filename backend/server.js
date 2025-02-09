@@ -1,19 +1,21 @@
-require('dotenv').config(); // Load environment variables
+// fileName : server.js 
+// Example using the http module
+import { createServer } from 'http';
 
-import express, { json } from 'express';
-import cors from 'cors';
-import authRoutes from './routes/authRoutes'; // Import routes
+// Create an HTTP server
+const server = createServer((req, res) => {
+    // Set the response headers
+    res.writeHead(200, { 'Content-Type': 'text/html' });
 
-const app = express();
+    // Write the response content
+    res.write('<h1>Hello, Node.js HTTP Server!</h1>');
+    res.end();
+});
 
-const cors = require('cors');
-
-app.use(cors()); // Enable CORS for frontend-backend communication
-app.use(json()); // Enable JSON parsing in requests
-
-// Routes
-app.use('/api/auth', authRoutes);
+// Specify the port to listen on
+const port = 3000;
 
 // Start the server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+server.listen(port, () => {
+    console.log(`Node.js HTTP server is running on port ${port}`);
+});

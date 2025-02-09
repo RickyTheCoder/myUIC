@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StatusBar, TextInput, Image, TouchableOpacity, StyleSheet, ImageBackground, ScrollView } from 'react-native';
 import backgroundImage from './image.png';
+import Svg, { Path, ClipPath, Defs, Image as SvgImage } from 'react-native-svg';
 
 
 
@@ -45,13 +46,14 @@ export default function Login({navigation}) {
         </Text>
       </View>
       <Image
-        source={require('./sparky.png')} 
+        source={require('./sparky.png')} // Or your image path
         style={styles.bottomImage}
-        resizeMode="contain" 
+        resizeMode="contain" // Or "cover", "stretch", etc. as needed
       />
     </ImageBackground>
   );
 }
+
 
 const styles = StyleSheet.create({
   background: {
