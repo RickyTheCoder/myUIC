@@ -1,10 +1,11 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react'; 
+import { View, Text, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform } from 'react-native';
 import { FontAwesome5, MaterialIcons, Entypo, Feather, Ionicons } from '@expo/vector-icons';
 import { Linking } from 'react-native';
 
 
 export default function HomeScreen() {
+  const [chatInput, setChatInput] = useState('');
   return (
     <View style={styles.container}>
       <Text style={styles.header}>MyUIC Home</Text>
@@ -54,7 +55,26 @@ export default function HomeScreen() {
           <Text style={styles.label}>Blackboard</Text>
         </TouchableOpacity>
       </View>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios'? 'padding': 'height'}
+        style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }} 
+      >
+        <View style={styles.chatContainer}>
+          <TextInput
+            style={styles.chatInput}
+            placeholder="Input prompt here"
+            value={chatInput}
+            onChangeText={setChatInput}
+            placeholderTextColor="grey"
+          />
+          
+          <TouchableOpacity style={styles.sendButton}>
+            <Text style={styles.sendButtonText}>Send</Text>
+          </TouchableOpacity>
+        </View>
+      </KeyboardAvoidingView>
     </View>
+    
   );
 }
 
@@ -90,4 +110,32 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 10,
   },
+  chatContainer: {
+    backgroundColor: 'white',
+    padding: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderTopWidth: 1,
+    borderTopColor: '#ddd',
+    marginBottom: 20,
+  },
+  chatInput: {
+    flex: 1,
+    backgroundColor: '#fff',
+    padding: 10,
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#ddd',
+    marginRight: 10,
+  },
+  sendButton: {
+    backgroundColor: '#007BFF', 
+    padding: 10,
+    borderRadius: 5,
+  },
+  sendButtonText: {
+    color: 'white',
+    fontWeight: 'bold',
+  },
+
 });
