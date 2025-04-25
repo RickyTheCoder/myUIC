@@ -11,7 +11,7 @@
   The tech stack includes React Native for a user-friendly UI, Node.Js for the back-end, and Firebase for user authentication.
   
 
-##Get started!
+## Get started!
 1. Clone repository using: git clone https://github.com/RickyTheCoder/myUIC
 2. Change directory to frontend using: cd frontend
 3. Download Dependencies:
