@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StatusBar, TextInput, Image, TouchableOpacity, StyleSheet, ImageBackground, ScrollView } from 'react-native';
 import backgroundImage from './image.png';
 import Svg, { Path, ClipPath, Defs, Image as SvgImage } from 'react-native-svg';
-import { Linking } from 'react-native';
+
 
 
 export default function Login({navigation}) {
@@ -41,17 +41,17 @@ export default function Login({navigation}) {
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
 
-       <TouchableOpacity onPress={() => Linking.openURL('https://identity.uillinois.edu/iamFrontEnd/iam/start?campus=uic')} >
-         <Text style={styles.signupText}>
-           Trouble logging in?
-         </Text>
-         <Text style={styles.signupLink}>
-           Change Password
-         </Text>
-       </TouchableOpacity>
-     </View>
-   </ImageBackground>
- );
+        <Text style={styles.signupText}>
+          Don't have an account? <Text style={styles.signupLink}>Sign Up</Text>
+        </Text>
+      </View>
+      <Image
+        source={require('./sparky.png')} // Or your image path
+        style={styles.bottomImage}
+        resizeMode="contain" // Or "cover", "stretch", etc. as needed
+      />
+    </ImageBackground>
+  );
 }
 
 
@@ -63,7 +63,6 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    // marginTop: 5,
   },
   container: {
     backgroundColor: 'rgba(255, 255, 255, 0.85)', 
@@ -110,11 +109,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   bottomImage: {
-    width: '100%', // Or a specific width
-    height: 150, // Or a specific height
+    width: '100%',
+    height: 150, 
     position: 'absolute',
     bottom: 30,
-    // Add marginTop if needed to slightly lift it
-    // marginTop: 10,
   },
 });

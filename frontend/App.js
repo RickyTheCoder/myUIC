@@ -23,7 +23,7 @@ export default function App() {
           component={HomeScreen} 
           options={({ navigation }) => ({
             title: 'MyUIC Home',
-            headerLeft: null, // Remove back button
+            headerLeft: null, 
             headerRight: () => (
               <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                 <Text style={{ color: 'blue',fontWeight: 'bold', marginRight: 15 }}>Logout</Text>
