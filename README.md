@@ -22,3 +22,6 @@
 4. Run: npx expo start
 5. Download Expo Go on your iOS device via the app store.
 6. Scan barcode displayed in terminal
+
+## Current progress:
+- Integrating Firebase for user authentication and fast deployment 
