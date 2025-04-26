@@ -2,8 +2,10 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { TouchableOpacity, Text } from 'react-native';
+import { View, TextInput, Button, Text} from 'react-native';
 
-
+import { auth } from '../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import LoginScreen from './Login.js';
 import HomeScreen from './Home.js';
 
