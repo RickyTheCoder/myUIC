@@ -19,9 +19,11 @@
       - On mac: brew install node
       - On windows: choco install nodejs
     - Run: npm install for both 'frontend' and 'backend' folders
-4. Run: npx expo start
-5. Download Expo Go on your iOS device via the app store.
-6. Scan barcode displayed in terminal
+4. Run:
+   - Frontend: npx expo start
+   - Backend: npm start
+6. Download Expo Go on your iOS device via the app store.
+7. Scan barcode displayed in terminal
 
 ## Current progress:
 - Integrating Firebase for user authentication and fast deployment 
