@@ -18,7 +18,7 @@
     - Install Node.js (if not already installed):
       - On mac: brew install node
       - On windows: choco install nodejs
-    - Run: npm install
+    - Run: npm install for both 'frontend' and 'backend' folders
 4. Run: npx expo start
 5. Download Expo Go on your iOS device via the app store.
 6. Scan barcode displayed in terminal
